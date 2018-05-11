@@ -28,10 +28,10 @@ $( document ).ready(function() {
       } 
       else if ($(window).width() > 2000 ){
         $( document ).ready(function() {
-          $('.jarallax-img').css('top', '-100px');
+          $('.jarallax-img').css('top', '-85px');
         });
         $(window).scroll(function() {
-          $('.jarallax-img').css('top', '-100px');
+          $('.jarallax-img').css('top', '-85px');
         });
       }
       else {
