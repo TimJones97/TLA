@@ -1,97 +1,83 @@
-/* Scroll Postion for CSS Animations */
-var safariOrEdge = false;
+$('.jarallax').jarallax({
+    speed: 0.2
+});
 
-/*----------------------------------------------------------------------------------*/
-(function() {
-  $( document )
-    .on( "mousemove", ".snapshot-aml", function( event ) {
+$( document ).ready(function() {
+  if ($(window).width() > 479 && $(window).width() < 2000){
+    $( document ).ready(function() {
+      $('.jarallax-img').css('top', '-50px');
+    });
+    $(window).scroll(function() {
+      $('.jarallax-img').css('top', '-50px');
+    });
+  } 
+  else if ($(window).width() > 2000 ){
+    $( document ).ready(function() {
+      $('.jarallax-img').css('top', '-100px');
+    });
+    $(window).scroll(function() {
+      $('.jarallax-img').css('top', '-100px');
+    });
+  }
+  else {
+    $( document ).ready(function() {
+      $('.jarallax-img').css('top', '0px');
+    });
+    $(window).scroll(function() {
+      $('.jarallax-img').css('top', '0px');
+    });
+  }
+});
 
-    var elmnt = document.getElementById("snapshot");
 
-    var halfW = ( elmnt.clientWidth / 2 );
-    var halfH = ( elmnt.clientHeight / 2 );
-    var coorX = ( halfW - ( event.pageX - elmnt.offsetLeft ) );
-    var coorY = ( halfH - ( event.pageY - elmnt.offsetTop ) );
-    var degX, degY;
-  // if($(window).width() > 2000 && $(window).height() > 1000){
-  //   degX  = ( ( coorY / halfH ) * 20 ) + 'deg'; // max. degree = 10
-  // }
-  // if(safariOrEdge && $(window).width() > 2000 && $(window).height() > 1000){
-  //   degX  = ( ( coorY / halfH ) * 10 ) + 'deg'; // max. degree = 10
-  // }
-    degX  = ( ( coorY / halfH ) * 10 ) + 'deg'; // max. degree = 10
-    degY  = ( ( coorX / halfW ) * -2 ) + 'deg'; // max. degree = 10
-    // $('.snapshot-aml').css( 'transform', function() {
+$(window).on('resize', function(){
+  if ($(window).width() > 479 && $(window).width() < 2000){
+    $( document ).ready(function() {
+      $('.jarallax-img').css('top', '-50px');
+    });
+    $(window).scroll(function() {
+      $('.jarallax-img').css('top', '-50px');
+    });
+  } 
+  else if ($(window).width() > 2000 ){
+    $( document ).ready(function() {
+      $('.jarallax-img').css('top', '-100px');
+    });
+    $(window).scroll(function() {
+      $('.jarallax-img').css('top', '-100px');
+    });
+  }
+  else {
+    $( document ).ready(function() {
+      $('.jarallax-img').css('top', '0px');
+    });
+    $(window).scroll(function() {
+      $('.jarallax-img').css('top', '0px');
+    });
+  }
+});
 
-    //   return 'perspective( 1000px ) translate3d( 0, 0px, 50px ) rotateX('+ degX +') rotateY('+ degY +')';
-    // } );
-    $('.aml-description').css( 'color', 'black');
-  } )
-    .on( "mouseout", ".snapshot", function() {
-    // $('.snapshot-aml').removeAttr( 'style' )
-    $('.aml-description').removeAttr( 'style' )
-  } );
-})();
-/*----------------------------------------------------------------------------------*/
-(function() {
-  $( document )
-    .on( "mousemove", ".snapshot-atlin", function( event ) {
+$( document ).ready(function() {
+  $('.jarallax').css('z-index', 'unset');
+});
+$(window).scroll(function() {
+  $('.jarallax').css('top', 'unset');
+});
 
-    var elmnt = document.getElementById("snapshot");
+//collapse the navbar upon selection from hamburger menu
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
 
-    var halfW = ( elmnt.clientWidth / 2 );
-    var halfH = ( elmnt.clientHeight / 2 );
-    var coorX = ( halfW - ( event.pageX - elmnt.offsetLeft ) );
-    var coorY = ( halfH - ( event.pageY - elmnt.offsetTop ) );
-    var degX, degY;
-  // if($(window).width() > 2000 && $(window).height() > 1000){
-  //   degX  = ( ( coorY / halfH ) * 20 ) + 'deg'; // max. degree = 10
-  // }
-  // if(safariOrEdge && $(window).width() > 2000 && $(window).height() > 1000){
-  //   degX  = ( ( coorY / halfH ) * 10 ) + 'deg'; // max. degree = 10
-  // }
-    degX  = ( ( coorY / halfH ) * 10 ) + 'deg'; // max. degree = 10
-    degY  = ( ( coorX / halfW ) * -2 ) + 'deg'; // max. degree = 10
-    // $('.snapshot-aml').css( 'transform', function() {
-
-    //   return 'perspective( 1000px ) translate3d( 0, 0px, 50px ) rotateX('+ degX +') rotateY('+ degY +')';
-    // } );
-    $('.atlin-description').css( 'color', 'black');
-  } )
-    .on( "mouseout", ".snapshot", function() {
-    // $('.snapshot-aml').removeAttr( 'style' )
-    $('.atlin-description').removeAttr( 'style' )
-  } );
-})();
-/*----------------------------------------------------------------------------------*/
-(function() {
-  $( document )
-    .on( "mousemove", ".snapshot-carrard", function( event ) {
-
-    var elmnt = document.getElementById("snapshot");
-
-    var halfW = ( elmnt.clientWidth / 2 );
-    var halfH = ( elmnt.clientHeight / 2 );
-    var coorX = ( halfW - ( event.pageX - elmnt.offsetLeft ) );
-    var coorY = ( halfH - ( event.pageY - elmnt.offsetTop ) );
-    var degX, degY;
-  // if($(window).width() > 2000 && $(window).height() > 1000){
-  //   degX  = ( ( coorY / halfH ) * 20 ) + 'deg'; // max. degree = 10
-  // }
-  // if(safariOrEdge && $(window).width() > 2000 && $(window).height() > 1000){
-  //   degX  = ( ( coorY / halfH ) * 10 ) + 'deg'; // max. degree = 10
-  // }
-    degX  = ( ( coorY / halfH ) * 10 ) + 'deg'; // max. degree = 10
-    degY  = ( ( coorX / halfW ) * -2 ) + 'deg'; // max. degree = 10
-    // $('.snapshot-aml').css( 'transform', function() {
-
-    //   return 'perspective( 1000px ) translate3d( 0, 0px, 50px ) rotateX('+ degX +') rotateY('+ degY +')';
-    // } );
-    $('.carrard-description').css( 'color', 'black');
-  } )
-    .on( "mouseout", ".snapshot", function() {
-    // $('.snapshot-aml').removeAttr( 'style' )
-    $('.carrard-description').removeAttr( 'style' )
-  } );
-})();
-
+$(document).ready(function () {
+    // bind click event to all internal page anchors
+    $('a[href*="#"]').on('click', function (e) {
+        // prevent default action and bubbling
+        e.preventDefault();
+        e.stopPropagation();
+        // set target to anchor's "href" attribute
+        var target = $(this).attr('href');
+        // scroll to each target
+        $(target).velocity("scroll", 1000);
+    });
+});
