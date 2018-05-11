@@ -1,5 +1,5 @@
 $('.jarallax').jarallax({
-    speed: 0.2
+    speed: 0.3
 });
 
 $( document ).ready(function() {
@@ -59,9 +59,11 @@ $(window).on('resize', function(){
 
 $( document ).ready(function() {
   $('.jarallax').css('z-index', 'unset');
+  // $('#jarallax-container-0').css('transform', 'skewY(3deg) translateZ(0)');
 });
 $(window).scroll(function() {
   $('.jarallax').css('top', 'unset');
+  // $('#jarallax-container-0').css('transform', 'skewY(3deg) translateZ(0)');
 });
 
 //collapse the navbar upon selection from hamburger menu
