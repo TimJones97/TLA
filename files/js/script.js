@@ -14,7 +14,7 @@ $( document ).ready(function() {
     if ((is_chrome)&&(is_safari)) {
       is_safari=false;
     }
-    if( $(window).width() > 768 && (!is_safari && !is_edge_or_ie)){
+    if( !is_safari && !is_edge_or_ie ){
       $('.jarallax').jarallax({
           speed: 0.3
       });
