@@ -57,6 +57,7 @@
   -o-transform: skewY(3deg) translateZ(0);
   transform: skewY(3deg) translateZ(0);
   text-align: center;
+  z-index: 1000;
 }
 h1 {
   text-align: left !important;
@@ -69,7 +70,7 @@ h1 {
   background: white;
 }
 
-.title-block-right .title {
+.title-block-right .jarallax .title {
   position: absolute;
   right: 50px;
   top: 42%;
@@ -78,6 +79,7 @@ h1 {
   -ms-transform: skewY(-3deg) translateZ(0);
   -o-transform: skewY(-3deg) translateZ(0);
   transform: skewY(-3deg) translateZ(0);
+  z-index: 1000;
 }
 .title-block-left h1, 
 .title-block-right h1 {

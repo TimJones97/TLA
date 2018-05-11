@@ -1,33 +1,56 @@
-$('.jarallax').jarallax({
-    speed: 0.3
-});
 
 $( document ).ready(function() {
-  if ($(window).width() > 479 && $(window).width() < 2000){
-    $( document ).ready(function() {
-      $('.jarallax-img').css('top', '-50px');
-    });
-    $(window).scroll(function() {
-      $('.jarallax-img').css('top', '-50px');
-    });
-  } 
-  else if ($(window).width() > 2000 ){
-    $( document ).ready(function() {
-      $('.jarallax-img').css('top', '-100px');
-    });
-    $(window).scroll(function() {
-      $('.jarallax-img').css('top', '-100px');
-    });
-  }
-  else {
-    $( document ).ready(function() {
+    //Detect browser and disable fixed backgrounds if on Safari or IE/Edge
+    var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+    var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+    var is_edge_or_ie;    
+    
+    var ua = window.navigator.userAgent;
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+    if (trident > 0 || edge > 0) {
+      is_edge_or_ie = true;
+    }
+    if ((is_chrome)&&(is_safari)) {
+      is_safari=false;
+    }
+    if( !is_safari && !is_edge_or_ie){
+      $('.jarallax').jarallax({
+          speed: 0.3
+      });
+      if ($(window).width() > 479 && $(window).width() < 2000){
+        $( document ).ready(function() {
+          $('.jarallax-img').css('top', '-50px');
+        });
+        $(window).scroll(function() {
+          $('.jarallax-img').css('top', '-50px');
+        });
+      } 
+      else if ($(window).width() > 2000 ){
+        $( document ).ready(function() {
+          $('.jarallax-img').css('top', '-100px');
+        });
+        $(window).scroll(function() {
+          $('.jarallax-img').css('top', '-100px');
+        });
+      }
+      else {
+        $( document ).ready(function() {
+          $('.jarallax-img').css('top', '0px');
+        });
+        $(window).scroll(function() {
+          $('.jarallax-img').css('top', '0px');
+        });
+      }
+    }
+    else {
       $('.jarallax-img').css('top', '0px');
-    });
-    $(window).scroll(function() {
-      $('.jarallax-img').css('top', '0px');
-    });
-  }
-});
+      $('.jarallax-img').css('z-index', '-1');
+    }
+  });
+// $('.jarallax').jarallax({
+//     speed: 0.3
+// });
 
 
 $(window).on('resize', function(){
