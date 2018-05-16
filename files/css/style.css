@@ -707,7 +707,7 @@ body {
     right: 3px;
   }
   .title-block-main .jarallax .title-main h1 {
-    font-size: 52px;
+    font-size: 36px;
     right: 10px;
   }
   .title-block-main, .bg_main {
@@ -795,13 +795,13 @@ body {
   }
   .navbar-nav > li > a {
     font-size: 14px;
+  padding-bottom: 10px;
   }
   .navbar-nav > li {
     top: 10vh;
   }
   .go-up {
     left: 46.5%;
-    margin-bottom: 80px;
   }
 } 
 
