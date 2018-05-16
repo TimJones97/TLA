@@ -5,6 +5,7 @@
   box-shadow: -1px 3px 35px 8px rgba(0,0,0,0.75);
   margin: 80px;
   z-index: 10;
+  position: relative;
 }
 .title-block-left {
   height: 55vh;
@@ -86,7 +87,7 @@ h1, h2 {
 .title-block-left h1, 
 .title-block-right h1 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 100;
+  font-weight: 500;
   text-align: center;
   font-size: 50px;
   color: white;
@@ -103,6 +104,9 @@ h1, h2 {
 }
 .no-margin-bottom {
   margin-bottom: 0px !important;
+}
+.add-margin-bottom {
+  margin-bottom: 200px !important;
 }
 .bg_main, .bg1, .bg2, .bg3, .bg4, .bg5, .bg6, .bg7, .bg8, .bg9 {
   /*background-position: center;
@@ -138,7 +142,7 @@ h1, h2 {
   height: 100%;
   z-index: 20;
   background-blend-mode: multiply;
-  background: rgba(0,0,0,0.28);
+  background: rgba(0,0,0,0.28);y
 } 
 
 .body-container {
@@ -148,12 +152,34 @@ h1, h2 {
   overflow: hidden;
   color: #3b3b3b;
   background: #e7e7e7;
-  z-index: 1;
+  z-index: 2;
+  position: relative;
   /*-webkit-box-shadow: -1px -1px 25px 2px rgba(150,150,150,1);
   -moz-box-shadow: -1px -1px 25px 2px rgba(150,150,150,1);
   box-shadow: -1px -1px 25px 2px rgba(150,150,150,1);*/
 }
 
+.footer {
+  background: transparent;
+  color: #e7e7e7;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1 !important;
+}
+.footer .text-block-info {
+  margin-bottom: 30px;
+}
+
+.footer p {
+  text-align: center;
+  margin: 0 0 0px;
+}
 .block {
     /*display: none;*/
     /*margin-top: 40px;*/
@@ -514,16 +540,25 @@ body {
   letter-spacing: 4px;
   text-align: center;
 }
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
 .navbar-nav > li > a {
-  color: white !important;
   padding-top: 20px;
   padding-bottom: 20px;
   font-family: 'Poppins', sans-serif;
   font-size: 20px;
-  -webkit-transition: all 0.1s ease;
-  -o-transition: all 0.1s ease;
-  transition: all 0.1s ease;
+  font-weight: 300;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
+
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>li>a:hover {
+  color: #00b6ff;
+}
+
 .navbar-collapse.collapse.in {
   display: block !important;
 }
@@ -531,9 +566,10 @@ body {
   font-size:14px;
 }
 .go-up {
-  position: absolute;
+  position: relative;
   left: 48.75%;
   margin-top: 20px;
+  height: 50px;
   z-index: 1;
 }
 .up-arrow {
